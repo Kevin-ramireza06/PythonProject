@@ -14,6 +14,8 @@ while dado1 != dado2 :
 
 print("se debio tirar el dado" , contador, "Veces")
 
+print("Prueba para subir")
+
 """
 igual = False
 contador1 = 0
