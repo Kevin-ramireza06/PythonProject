@@ -43,4 +43,30 @@ print(lista3)
 lista3.sort(reverse=True) #Asi lo podemos organizar de menor a mayor
 print(lista3)
 
+texto = str(lista3) #Tambuien podemos cambiar el tipo de dato de las listas de manera sencilla
+print(texto)
+
+texto = texto.replace("[", "")
+texto = texto.replace("]", "")
+#Aqui la usamos como si fuese un string
+
+print(texto)
+
+matriz = [[1,2,3],[4,5,6],[7,8,9]] #De esta forma se puede hacer una matriz, es un array de arrays
+#Pero en python no existe como tal las matrices
+print(matriz[1][0])
+
+print(lista3[:4]) #aqui tambine funcionan los emparedados, exactamente igual
+print(lista3[2:])
+print(lista3[1:3])
+print(lista3[::-1])
+
+if 3 in lista3:
+    print("Esta en la lista 3")
+
+if 88 not in lista3:
+    print("NO esta en la lista 3")
+
+#De estas formas podemos saber si una lista tiene o no un elemento
+#Tambien funciona con cadenas
 
