@@ -1,3 +1,7 @@
+#Listas
+
+print("---------------------Listas------------------------")
+
 lista = []
 lista2 = list()
 
@@ -69,4 +73,123 @@ if 88 not in lista3:
 
 #De estas formas podemos saber si una lista tiene o no un elemento
 #Tambien funciona con cadenas
+
+#Tuplas
+
+print("---------------------Tuplas------------------------")
+
+tupla = (1,2,3,4,5)
+print(tupla)
+
+tupla2 = ("Maria", "Hola", "Mundo")
+tupla3 = ("Sisas" , False, 32, (1,2,3))
+
+#Las tuplas son listas que np se pueden modificar, y se crean con los parentesis
+
+print(tupla2)
+print(tupla3)
+
+tupla4 = ()
+tupla5 = ("Sevilla",) # Sin la coma python pensara que es un elemento con parentesis redundante, asi ya lo reconoce
+
+print(tupla4)
+print(tupla5)
+
+listaTupla = list(tupla2) #Se puede convertir una tupla a lista y modificarla, pero es absurdo
+print(listaTupla)
+
+textoTupla = str(tupla3)
+print(textoTupla)
+
+tupla6 = tuple([1,2,3,4,5])
+print(tupla6)
+
+tupla7 = tuple("Hola Mundo")
+print(tupla7)
+
+tupla8 = "Pepe" , "Pepa" , "11", tupla6 , "Si"
+print(tupla8)
+
+#tupla8[1] = "Pepa"
+print(tupla3)
+#tupla3[3][1] = 4
+print(tupla3)
+
+if 4 in tupla6 :
+    print("El 4 esta en la tupla")
+
+if 33 not in tupla6 :
+    print("El 33 no esta en la tupla")
+
+profesor = ("Pepe", "Ramirez", 57, False, True)
+nombre, apellidos, edad, alumno, profe = profesor
+print(apellidos,edad)
+
+#Conjuntos
+
+print("---------------------Conjuntos------------------------")
+
+conjunto = {"Ana", "Juan", "Jose", "Sancho", "Natalia"}
+print(conjunto)
+
+#Los conjuntos son estructuras que no contienen orden, son mutables y se peuden usar las operaciones logicas
+conjunto2 = set(["Agustin", "Ana", "Natalia", "Javier"])
+print(conjunto2)
+
+
+
+if "Agustin" in conjunto2 :
+    print("Agustin esta en conjunto 2")
+
+if "Javier" not in conjunto :
+    print("Javier no estya en el primer conjunto")
+
+for i in conjunto :
+    print(i)
+
+#Al no tener orden, no los podemos recorrer con indices
+#for i in range(0, len(conjunto)) :
+    #print(conjunto[i]) Esto da error
+
+conjunto2.add("Jose Maria") #Add nos permite agregar un elemento al conjunto, pero en cualquier posicion
+print(conjunto2)
+
+conjunto2.add("Jose Maria") #Tampoco se pueden agreagar duplicados, si se intenta simplemente se ignora
+print(conjunto2)
+
+conjunto2.remove("Agustin") #De esta forma podemos eliminar elementos
+print(conjunto2)
+
+conjunto2.discard("Ana") #tambien nos permite borrar, la diferencia con remove es que remove, si no esta el elemento tira error
+print(conjunto2)
+
+profeRecuperado = conjunto2.pop() #El punto pop nos recupera y elimina del conjunto el primer elemento, pero ps siempre es aleatorio
+print(profeRecuperado)
+print(conjunto2)
+
+#conjunto.clear() # el clear nos vacia completamente un conjunto, y de salida muestra "set()"
+#print(conjunto)
+
+conjunto3 = set([1,2,3,3,4,5]) #Al crearla con duplicados, crea el conjunto sin ellos
+print(conjunto3)
+
+conjunto4 = set("Hola Mundo Sisas") #Aqui guarda cada caracter como un elemento diferente, si esta repetida, la ignora
+print(conjunto4)
+
+listaConjunto  = list(conjunto2)
+print(listaConjunto)
+tuplaCOnjunto = tuple(conjunto3)
+print(tuplaCOnjunto)
+textoConjuto = str(conjunto4)
+print(textoConjuto)
+
+#Operaciones
+
+print(conjunto.union(conjunto2)) #conjunto | conjunto2) #union
+print(conjunto.intersection(conjunto2)) #conjunto & conjunto2) #interseccion
+print(conjunto.difference(conjunto2)) #conjunto - conjunto2) #diferencia
+print(conjunto.symmetric_difference(conjunto2)) #conjunto ^ conjunto2) #diferencia exclusiva
+
+
+
 
