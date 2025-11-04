@@ -190,6 +190,38 @@ print(conjunto.intersection(conjunto2)) #conjunto & conjunto2) #interseccion
 print(conjunto.difference(conjunto2)) #conjunto - conjunto2) #diferencia
 print(conjunto.symmetric_difference(conjunto2)) #conjunto ^ conjunto2) #diferencia exclusiva
 
+print("------Forma Adicional de recorrer listas-------")
 
+for i, nombre in enumerate(lista4):
+    print(i,"-",nombre)
 
+print("-----------------------------------------")
+print("-----------------------------------------")
+
+numero1 = 7
+numero2 = numero1
+numero2 = numero2 * 2
+
+print(numero2 , numero1)
+
+numero1 = [7]
+numero2 = numero1 #Lo que demuestra esto es que las variables de lista se guardan como referencia y no como copia
+#Por lo que en listas hacer que una variable apunte a otra lista, si esa variable se modifica, cambia la lista tambien
+#como en este ejemplo
+numero2[0] = numero2[0] * 2
+
+print(numero2 , numero1)
+
+#Si queremos hacer una copia, y qe los cambios en un lado no afecten al otro hacemos una copia
+
+numero1 = [7]
+numero2 = numero1.copy() # asi hacemos una copia
+numero2[0] = numero2[0] * 2
+
+print(numero2 , numero1)
+
+def miniFuncion(Listado):
+    print(Listado)
+
+miniFuncion(numero1.copy()) # asi mismo tambien se pueden pasar por argumento
 
