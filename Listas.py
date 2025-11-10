@@ -136,8 +136,6 @@ print(conjunto)
 conjunto2 = set(["Agustin", "Ana", "Natalia", "Javier"])
 print(conjunto2)
 
-
-
 if "Agustin" in conjunto2 :
     print("Agustin esta en conjunto 2")
 

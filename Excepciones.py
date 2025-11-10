@@ -27,10 +27,8 @@ if numero < 0 :
 
 print(numero)
 
+#raise "Aqui se da un error en principio"
 #raise ZeroDivisionError("No has dividido entre 0 pero te salto el error pq soy la picha")
 #Con el mismo metodo podemos soltar una excepcion reconocida por python, y dejar un mensaje personalizado
-
-
-
 
 print("Fin del programa")
