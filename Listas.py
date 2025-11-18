@@ -223,3 +223,67 @@ def miniFuncion(Listado):
 
 miniFuncion(numero1.copy()) # asi mismo tambien se pueden pasar por argumento
 
+#Diccionarios
+
+print("---------------Diccionarios---------------")
+
+diccionario = {"Nombre": "sarah", "Edad" : 57, "Estado civil" : True }
+
+#Cada "," separa un elemento clave/ valor, a la izquierda de los : es la clave, a la derecha es el valor
+
+print(diccionario)
+
+print(diccionario["Edad"]) #Para seleccionar un valor del diccionario, es similar que los arrays, solo que se pone el
+#De la llave
+
+diccionario2 = {"Nombre": "sarah", "Edad" : 57, "Estado civil" : True , "Edad" : 55}
+#No se pueden tener elementos duplicados, al intentarlo, se reescribe el primer elemento por el segundo
+print(diccionario2)
+
+for element in diccionario :
+    print(element)
+    #Al recorrerlo de esta forma, elemento captura la clave NO EL VALOR
+    print(diccionario[element])
+    #Para capturar el valor, es como dijimos antes
+
+for elemento in diccionario2:
+    print(elemento , ":", diccionario2[elemento])
+
+for clave, valor in diccionario.items() :
+    #DE esta forma podemos capturar la clave y el valor, el metodo items, devuelve los 2, y en el for asignamos las
+    #variables para asignar los valores
+    print(clave , "->" , valor)
+
+print(diccionario.get("Edad")) #El metodo get me permite coger el valor que tenga la clave que mande
+
+print(diccionario.get("Edad2"))
+#print(diccionario["Edad2"]) la mayor diferencia con este, es que la forma clasica devuelve un error cuando la clave no
+#existe
+
+diccionario["Edad"] = 33 #asi se puede cambiar el valor de una clave
+print(diccionario["Edad"])
+
+diccionario2["Asignatura"] = "BBDD" #Si me equivoco copn la clave, con esta sintaxis crea uan nueva clave, con ese valor
+#Al final del diccionario
+print(diccionario2)
+
+diccionario2.clear() #Este metodo vacia el diccionario/lista
+
+print(diccionario2)
+
+#diccionario3 = dict() #Asi podemos crear un diccionario vacio
+#
+
+diccionario3 = dict(Primero = "Nonas", Segundo = "Sisas") # de esta otra forma cramos el diccionario con valores por default
+
+diccionario3["Elemento"] = "Sisarras"
+
+print(diccionario3)
+
+diccionario4 = {} #asi tambien se puede crear vacio
+
+print(diccionario4)
+
+
+
+

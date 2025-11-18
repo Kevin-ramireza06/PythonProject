@@ -6,7 +6,7 @@ patron = r"^(([0-9]{1})|([0-9][0-9]{2})|([1][0-9][0-9]{3})|([2][0-4][0-9]{3})|([
 
 if re.fullmatch(patron, ip):
     bytes = ip.split(".")
-    if int(bytes[0]) <= 127 :
+    if int(bytes[0]) <= 127 : #if int(bytes[0]) in range (0,128):
         print(ip,"/8", sep="")
     if int(bytes[0]) <= 191 and int(bytes[0]) >= 128:
         print(ip, "/16", sep="")

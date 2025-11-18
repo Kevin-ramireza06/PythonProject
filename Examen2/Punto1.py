@@ -30,3 +30,7 @@ pinTupla = esconderPin(6240)
 for i in pinTupla:
     print(i)
 
+#-------------------------Correccion-------------------------
+
+
+
