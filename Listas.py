@@ -284,6 +284,60 @@ diccionario4 = {} #asi tambien se puede crear vacio
 
 print(diccionario4)
 
+print(diccionario)
+print(diccionario.keys()) #Este devuelve todas las llaves en una lista
+print(diccionario.values()) #Este devuelve todas los valores en una lista
+print(diccionario.items()) #Este devuelve todo
+
+print(diccionario.get("Titulo" , "NO existe")) #EL metodo get tiene de segundo parametro, lo que quiero que devuelva en
+#caso de que no encuentre el valor
+
+print(diccionario)
+
+diccionario.pop("Estado civil") #Este metodo nos permite borrar un elemento, mediante la clave
+#diccionario.pop("Estado civil2") si no existe da error
 
 
+print(diccionario)
+
+elementoBorrado = diccionario3.popitem() #El popitem borra el ultimo elemento insertado y lo devuelve
+print(elementoBorrado)
+print(diccionario3)
+
+diccionario.update(diccionario3) #De esta forma actualizamos de manera masiva el diccionario, agregando todos los
+#elementos de un diccionario en otro, como el diccionario en parametro tiene la misma clave que el otro, el original se
+#le actualiza la clave
+
+print(diccionario)
+
+diccionario6 = {"Lista" : [1,2,3] , "Boolean" : True , "Numero" : 9 , "Texto" : "Sisas"}
+#Los diccionarios tambien pueden guardar cualquier tipo de dato de los que ya hemos visto antes
+
+print(diccionario6)
+
+print(diccionario6.setdefault("Elemento","Si"))
+print(diccionario6)
+print(diccionario6.setdefault("Boolean",False))
+print(diccionario6)
+#El metodo setdefault, devuelve el valor de una clave que pongamos, si no esta en la lista, la agreaga al final
+#Y si esta, devuelve el valor anterior y lo modifica
+
+import random
+print("--------------Ejercicio Crear popitem anterior--------------")
+
+def popitemrandom(diccionario) :
+    #lista = []
+    #for i in diccionario :
+    #    lista.append(i)
+    lista = list(diccionario.keys())
+    numeroRandom = random.randint(0, ( len(lista) - 1 ))
+
+    itemEliminado = diccionario[lista[numeroRandom]]
+    diccionario.pop(lista[numeroRandom])
+
+    return itemEliminado
+
+print(diccionario)
+print(popitemrandom(diccionario))
+print(diccionario)
 
