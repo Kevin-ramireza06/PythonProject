@@ -1,4 +1,15 @@
-from math import isnan
+#!/usr/bin/python3
+
+#dede python podemos trabajar desde consola de comandos, usando el comadno "python3" y ya con esto podemos
+#programar en java desde comandos
+
+#Podemos usar los scipts de python desde comandos, usando el comando "python3 nombreFichero.py" y se ejecuta
+#Y para ejecutarlo sin el interprete, solamente le damos permito de ejecucion al fichero,y lo ejecutamos en comandos
+#normal(En Linux)
+
+#Debemos de poner esta linea "#!/usr/bin/python3" para que el Sistema Operativo sepa el interprete que tiene que usar
+#para ejecutar el archivo
+
 import re
 
 def esconderPin(pin):
@@ -31,6 +42,8 @@ for i in pinTupla:
     print(i)
 
 #-------------------------Correccion-------------------------
+
+
 
 
 

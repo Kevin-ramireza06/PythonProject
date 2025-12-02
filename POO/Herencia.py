@@ -71,6 +71,10 @@ class ClaseG(ClaseE,ClaseF): #De esta forma hacemos que una clase herede de vari
     #Pero este prorixara el constructor de la clase que este de prrimero como padre
     #Pero puede acceder a los metodos de todas las clases padre tranquilamente, excepto en aquellas en lass que haya conflicto
     #Se pueden tener cualquier cantidad de padres
+    def queSoy(self):
+        super().queSoy(self)
+
+        print("Y ademas soy clase G")
     pass
 
 class ClaseH(ClaseF,ClaseE):
@@ -85,5 +89,6 @@ print(objeto5.nombre)
 print(objeto6.nombre)
 print(objeto7.nombre)
 print(objeto8.nombre)
+objeto7.queSoy()
 
 
