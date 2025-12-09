@@ -30,18 +30,37 @@ class Pokemon:
             case "Fuego":
                 if pokemonRival.__tipo== "Planta" or pokemonRival.__tipo== "Acero" or pokemonRival.__tipo== "Bicho" or pokemonRival.__tipo== "Hielo":
                     daño *= 2
+                elif pokemonRival.__tipo=="Agua" or pokemonRival.__tipo=="Roca" or pokemonRival=="Fuego" or pokemonRival=="Dragon":
+                    daño *= 0.5
             case "Planta":
                 if pokemonRival.__tipo== "Agua" or pokemonRival.__tipo== "Tierra" or pokemonRival.__tipo== "Roca":
                     daño *= 2
                 elif pokemonRival.__tipo=="Volador" or pokemonRival.__tipo=="" or pokemonRival=="Fuego" or pokemonRival=="Acero":
                     daño *= 0.5
             case "Acero":
-                if pokemonRival.__tipo== "Hielo" or pokemonRival.__tipo== "Roca" or pokemonRival.__tipo== "Psiquico":
+                if pokemonRival.__tipo == "Hielo" or pokemonRival.__tipo == "Roca" or pokemonRival.__tipo == "Hada":
                     daño *= 2
-                elif pokemonRival.__tipo=="Agua" or pokemonRival.__tipo=="Electrico" or pokemonRival=="Fuego" or pokemonRival=="Acero":
+                elif pokemonRival.__tipo == "Agua" or pokemonRival.__tipo == "Electrico" or pokemonRival == "Fuego" or pokemonRival == "Acero":
                     daño *= 0.5
-                elif pokemonRival.__tipo=="Veneno":
+                elif pokemonRival.__tipo == "Veneno":
                     daño = 0
+            case "Agua":
+                if pokemonRival.__tipo== "Fuego" or pokemonRival.__tipo== "Roca" or pokemonRival.__tipo== "Tierra":
+                    daño *= 2
+                elif pokemonRival.__tipo=="Agua" or pokemonRival.__tipo=="Planta" or pokemonRival=="Dragon":
+                    daño *= 0.5
+            case "Volador":
+                if pokemonRival.__tipo == "Planta" or pokemonRival.__tipo == "Bicho" or pokemonRival.__tipo == "Lucha":
+                    daño *= 2
+                elif pokemonRival.__tipo == "Acero" or pokemonRival.__tipo == "Electrico" or pokemonRival == "Roca":
+                    daño *= 0.5
+            case "Hielo":
+                if pokemonRival.__tipo == "Volador" or pokemonRival.__tipo == "Planta" or pokemonRival.__tipo == "Tierra" or pokemonRival.__tipo == "Dragon":
+                    daño *= 2
+                elif pokemonRival.__tipo == "Agua" or pokemonRival.__tipo == "Acero" or pokemonRival == "Hielo" or pokemonRival == "Fuego":
+                    daño *= 0.5
+
+
 
         pokemonRival.salud -= daño
         print(self.__nombre , "Ha atacado a", pokemonRival.__nombre , " y le quito " , daño , "de salud")
@@ -72,23 +91,17 @@ class Pokemon:
 
         return mensaje
 
-p1 = Pokemon(1,"Pikachu", "Electrico" )
-p2 = Pokemon(2,"Venusaur", "Planta")
-p3 = Pokemon(3,"Charizard", "Fuego" )
+class Equipo:
+    def __init__(self,codigo,nombreEquipo):
+        self.__codigo = codigo
 
-p1.setEvolucion(p2)
 
-p1.mostrar()
-p2.mostrar()
+class PokemonLegendario:
+    def __init__(self,codigo,nombre, tipo,nivel):
+        self.__codigo = codigo
 
-p2 = p2.evoluciona()
-p1 = p1.evoluciona()
 
-p1.mostrar()
-p2.mostrar()
-p3.mostrar()
 
-print(p2.combate(p3))
 
 
 
